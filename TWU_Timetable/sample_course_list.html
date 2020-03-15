@@ -1,0 +1,725 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta http-equiv="X-UA-Compatible" content="IE=EDGE" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" /><title>
+	My Course Schedule - Schedule Details | Course Schedule | Registration | Portal
+</title><base href="https://ics.twu.ca/ICS/">
+<script type="text/javascript">
+    window.jenzabar = {};
+    jenzabar.userSettings = {
+        culture:    'en-US',
+        language:   'en',
+        dateFormat: 'm/d/yy'
+    };
+    window.userSettings = jenzabar.userSettings;
+    jenzabar.siteSettings = {
+        text: {
+            more: 'More'   
+        }
+    };
+</script>
+
+<!-- BEGIN Html Head Elements -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/ICS/UI/Common/Styles/jQuery/jquery-ui.custom.css" />
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script type="text/javascript" src="portlets/cus/ics/BCProxyLogin/Scripts/ProxyLogin.js"></script>
+			<link type="text/css" rel="stylesheet" href="portlets/cus/ics/BCProxyLogin/Styles/ProxyLoginStyles.css" />
+<!-- END Html Head Elements -->
+
+<link href="/ICS/UI/Common/Styles/css/site-bundle.css?v=cMajQHxz1Nt0gVg0V4wZ5gyx_PfLvTl3JVb-F7ckPO01" rel="stylesheet"/>
+
+
+
+<link rel="stylesheet" type="text/css" media="print" href="/ICS/UI/Common/Styles/print.css" />
+
+<script src="/ICS/UI/Common/Scripts/site-bundle.js?v=E-ItTtpMrKfuT7URnnjQsRSTSYk6H6w54cY3BQymMyo1"></script>
+
+
+<!-- BEGIN Html Head Elements After JICS JS Framework -->
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/LayoutManager.js?v=9.2.1"></script>
+<!-- END Html Head Elements After JICS JS Framework -->
+
+
+<!--[if IE]>
+<style type="text/css" media="all">@import url( UI/Common/Styles/IEOnly.css );</style>
+<script type="text/javascript" language="JavaScript" src="UI/Common/Scripts/IEOnly.js"></SCRIPT>
+<![endif]-->
+<script type="text/javascript">
+    window.Portal =
+    {
+        url: 'https://ics.twu.ca/ICS/',
+        uid: "f8579823-43c0-4bf4-a680-d9ca36d92e12",
+    };
+</script>
+
+
+<script type="text/javascript">
+    jQuery(function () {
+        jenzabar.framework.timeoutWarning.create(false);
+    });
+</script><link rel="stylesheet" type="text/css" href="/ICSFileServer/Themes/TWU_Pacifica/style.css?v=1" />
+
+
+<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon"/>
+<style id="customHead_custom" type="text/css" media="all">@import url( /ICS/ClientConfig/HtmlContent/custom-bundle.css?v=k9q8LEZB8vO4DWkj3DQklVGNCvgejH83HxrPkpggT0U1);</style>
+</head>
+<body onload="doLoad();" class="logged-in">
+    <div id="siteWrapper" class="custom-grid">
+        <form name="MAINFORM" method="post" action="/ICS/Registration/Course_Schedule.jnz" id="MAINFORM" enctype="multipart/form-data" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="_scriptManager_HiddenField" id="_scriptManager_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['MAINFORM'];
+if (!theForm) {
+    theForm = document.MAINFORM;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/ICS/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZHJ5my_he0GvZ9mhGBCK5cBN5MvEM4ydmvGjGkOnjC_dYM67rpvMmCJX9dOJ9PG3dA2&amp;t=636765211264470882" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function( pi, $) {pi.PageID = '';pi.DisplayName = '';pi.PageURL = '';pi.IsCustomizing ='';pi.IsShowingPortlet = '';}(window.PageInfo = window.PageInfo || {}, PageInfo));try {window.PageInfo.PageID = 'e5066d21-7cc3-4c5a-8949-7541acf7a916';window.PageInfo.DisplayName = 'Course Schedule';window.PageInfo.PageURL = '/ICS/Registration/Course_Schedule.jnz';window.PageInfo.IsCustomizing ='False';window.PageInfo.IsShowingPortlet = 'False';window.PageInfo.IsReadOnly = 'False';}catch(ex){ console.error(ex);}//]]>
+</script>
+
+<script src="/ICS/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LWyyv3gvi71jSnm4NZtn2VjiiU0cFPx7Wwuo6RuwQ_8XsVbkdGbkFE52qFmbzuHRfgaQ00AxjEXIUn6jW99qllRjWVIDD7sKvQAgeQNl2eSM0&amp;t=245582f9" type="text/javascript"></script>
+<script src="/ICS/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScEj_2nP2YZ-Jt8KGhUY0_cnIq7AEAsKAvA4h20EQ2biM8m_3-7CrjeFiDPoP-8LbIV6OuBTO0eirPGtr7Wop0UifjPymbJ3nxmyLjpsOp0Gk0&amp;t=245582f9" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="38ABEAAB" />
+</div>
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('_scriptManager', 'MAINFORM', [], [], [], 90, '');
+//]]>
+</script>
+
+            <input name="___BrowserRefresh" type="hidden" id="___BrowserRefresh" value="561604f8-c03f-4512-a26e-34f165f4b537" />
+            <div role="navigation" aria-label="Skip to content">
+                <a href="#content" class="sr-only sr-only-focusable" onclick="window.location.hash='content'; return false;" onkeypress="if(event.keyCode !== 9){ window.location.hash='content'; return false;}">Skip to content</a>
+            </div>
+            <div id="masthead" role="banner">
+    <h1>
+        <a href=".">
+            <span class="sr-only">Jenzabar University</span>
+        </a>
+    </h1>
+    <!-- Add an image like so if you desire
+    <img src="./../../UI/Themes/Pacifica/images/logo_white.png" alt="Jenzabar University"/>
+    -->
+</div>
+            
+
+<nav id="top-nav-bar" class="top-nav-bar navbar navbar-default navbar-fixed-top" role="navigation" aria-label="Site tabs, search and login">
+    <div class="nav-container">
+        
+<div id="header-tabs" class="link-scroll vertical-menu">
+        <div class="collapse h-menu" id="hamburger-menu-section">
+        
+            <ul id="main-nav" class="nav navbar-nav no-margin">
+            
+                <li class="tab_Home firstTab">
+                    <a href="/ICS/">
+                        Home
+                    </a>
+                </li>
+            
+                <li class="tab_Registration selected">
+                    <a href="/ICS/Registration/">
+                        Registration
+                    </a>
+                </li>
+            
+                <li class="tab_Statement">
+                    <a href="/ICS/Statement/">
+                        Statement
+                    </a>
+                </li>
+            
+                <li class="tab_Housing">
+                    <a href="/ICS/Housing/">
+                        Housing
+                    </a>
+                </li>
+            
+                <li class="tab_My_Pages lastTab">
+                    <a href="/ICS/My_Pages/">
+                        My Pages
+                    </a>
+                </li>
+            
+            </ul>
+            
+        </div>
+    </div>
+        <button id="main-nav-btn" class="btn btn-primary-no-bg glyphicons glyphicons-menu-hamburger main-nav-btn" type="button" data-toggle="collapse" data-target="#hamburger-menu-section" aria-expanded="false" aria-controls="hamburger-menu-section"><span class="sr-only">main navigation</span></button>
+        <button id="siteNavBar_loginToggle" class="btn btn-primary-no-bg user-btn" type="button" data-toggle="collapse" data-target="#user-login-section" aria-expanded="false" aria-controls="user-login-section"><span style="background: transparent url('/ICS/icsfs/P8D061970-6F7E-4467-8D7C-385C15463B05.jpg?target=a1075cb7-7a40-4252-9c08-634b64a2cbb4') no-repeat top left/cover;"" class="user-image user-image-shape d-block"><span class="sr-only">Heechan Park</span></button>
+        <span role="search">
+            
+        </span>
+        <div id="welcomeBackBar" class="main-nav-submenu-container">
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        searchBox.textBox = 'siteNavBar_ctl00_tbSearch';
+        searchBox.button = 'siteNavBar_ctl00_lbSearch';
+        searchBox.userId = "f8579823-43c0-4bf4-a680-d9ca36d92e12";
+        searchBox.autoCompleteSelect = function(event, ui) {
+            $("#" + searchBox.textBox).val(ui.item.value);
+            __doPostBack('siteNavBar$ctl00$lbSearch','');
+        };
+        searchBox.initAutoComplete();
+        $('#siteNavBar_ctl00_lbSearch').keypress(function(e) {
+            var key = e.which;
+            if (key === 32 || key === 13) {
+                if (searchBox.searchClick()) {
+                    window.location.href = this.href;
+                }
+                return false;
+            }
+        });   
+    });
+ </script>
+
+<div id="searchAutoCompleteResults" class="searchAutoComplete"> </div>
+
+<div id="siteNavBar_ctl00_searchPanel" class="searchPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;siteNavBar_ctl00_lbSearch&#39;)">
+	
+    <div id="siteNavBar_ctl00_divSideBarContainer">
+        <div id="search-section" class="search-section collapse popover fade bottom">
+            <div class="arrow" style="left: 90%;"></div>
+            <div class="popover-content">
+                <div class="form-group"> 
+                    <label for="siteNavBar_ctl00_tbSearch" id="siteNavBar_ctl00_lblForSearch" class="sr-only">Search</label>
+                    <input name="siteNavBar$ctl00$tbSearch" type="text" id="siteNavBar_ctl00_tbSearch" class="search-input form-control" placeholder="Search..." onfocus="return searchBox.cleardefault();" onblur="return searchBox.restoredefault();" />
+               </div>
+                <label for="siteNavBar_ctl00_lbSearch" id="siteNavBar_ctl00_lblForSearchButton" class="sr-only">Search Button</label>
+                <a onclick="return searchBox.validate();" id="siteNavBar_ctl00_lbSearch" class="btn btn-sm btn-block btn-primary init-search-btn" role="button" href="javascript:__doPostBack(&#39;siteNavBar$ctl00$lbSearch&#39;,&#39;&#39;)">Search</a>
+            </div>
+        </div>
+    </div>
+
+</div><div id="user-login-section" class="collapse user-login popover fade bottom">
+<div class="arrow" style="left: 50%;"></div>
+<div class="popover-content">
+<span class="message">Welcome back </span>
+<span class="user-name d-block">Heechan Park</span>
+<ul>
+<li><a id="myProfileSettings" class="my-info-settings" href="?tool=myProfileSettings">My profile & settings</a></li>
+<li><a id="logout"class="btn btn-sm btn-block btn-primary init-logout-btn"href="javascript:__doPostBack('siteNavBar$welcomeBackBar','logout')" title="Click here to log out of the site">Logout</a></li>
+</ul>
+</div>
+</div>
+</div>
+    </div>
+</nav>
+<div id="TargetedMessage" class="targeted-message default-border-alternate-one color-background-one" role="region"><div class="wysiwygtext"><div class="alert alert-success jcf-has-errors alert-dismissable" role="alert">
+<p><strong>After you add or drop courses, click on <a href="https://ics.twu.ca/ICS/Statement/">"Update Account".</a></strong></p>
+</div></div></div>
+
+            <div id="mainCrumbs" class="main-crumbs" role="navigation" aria-label="Site breadcrumb">
+                
+                <div id="youAreHere">
+                    <span class="crumbs">
+                        <span class="breadcrumbs-title">You are here:&nbsp;</span> <a href="/ICS/Registration/">Registration</a> &gt; <a href="/ICS/Registration/Course_Schedule.jnz">Course Schedule</a> > <a href="/ICS/Registration/Course_Schedule.jnz?portlet=My_Course_Schedule">My Course Schedule</a> 
+                        <span id="portlet-breadcrumbs"></span>
+                    </span>
+                </div>
+            </div>
+            <div id="mainLayout" class="main-layout">
+                <div class="container-fluid">
+                <div class="row">
+                    
+                    <nav role="navigation" aria-label="Site pages">
+                        <div id="sideBar" class="col-md-2 mobile-padding-horizontal-none sidebar">                       
+                            <div id="sidebar-slide-menu-container" class="slide-menu-right">
+                                
+                                <div id="thisContext" class="side-section"><span class="sidebar-link-title"><a  href="/ICS/Registration/" >Registration</a></span><div class="navbar navbar-default"><ul id="contextPages" class="nav nav-pills nav-stacked"><li class="slide-menu-toggle-btns-wrapper"><ul class="nav nav-pills nav-stacked slide-menu-toggle-btns"><li class="active"><a id="menu-links-tab" role="tab" data-toggle="tab" href="#menu-links" aria-expanded="true" aria-controls="menu-links">Menu</a></li><li><a id="quick-links-tab" role="tab" data-toggle="tab" href="#quick-links" aria-expanded="false" aria-controls="quick-links">Quick Links</a></li></ul></li><li id="menu-links" class="tab-pane fade in active"><ul class="nav nav-pills nav-stacked" role="menu" aria-label="Page menu "><li><a role="menuitem" href="/ICS/Registration/Course_Registration.jnz" >Course Registration</a></li><li class="current-page"><a role="menuitem" href="/ICS/Registration/Course_Schedule.jnz" >Course Schedule</a></li><li><a role="menuitem" href="/ICS/Registration/Unofficial_Transcript.jnz" >Unofficial Transcript</a></li><li><a role="menuitem" href="/ICS/Registration/My_Course_Needs.jnz" >My Course Needs</a></li></ul></li><li id="quick-links" class="quick-links tab-pane fade"><span class="sidebar-link-title">Quick Links</span><ul class="nav nav-pills nav-stacked" role="menu" aria-label="main-menu"><li class="quick-links-with-sub-nav"><button id="myPages-label" class="my-pages sub-nav" data-toggle="collapse" href="#myPages" aria-expanded="false" aria-controls="myPages">My Pages<span class="glyphicons glyphicons-chevron-down"></span></button><ul role="menu" class="nav nav-pills nav-stacked collapse" aria-labelledby="myPages-label" id="myPages"><li><a role="menuitem" href="/ICS/My_Pages/" >Set Up My Pages</a></li></ul></li><li class="sidebar-quick-link"><a role="menuitem" class="anchor-contains-icon" href="https://www.twu.ca/students/current-students" title="Go back to the Student Portal">Student Portal<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a role="menuitem" class="anchor-contains-icon" target="_blank" href="https://ics.twu.ca/ICS/Help.jnz" title="Links for Help">Help<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a role="menuitem" class="anchor-contains-icon" href="https://www.twu.ca/help" title="Request Help">Request Help<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li></ul></li></ul></div></div>
+                                
+
+
+
+
+                                
+                                <div class="sideBarFoot containerFoot"></div>
+                            </div>
+                            <div id="sidebar-slide-menu-button" class="slide-menu-btn desktop-hide is-closed">
+                                
+                                <button class="sidebar-slide-btn-icon glyphicons glyphicons-chevron-right" type="button">
+                                    <span class="sr-only">Sidebar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+                    
+                    <div id="portlets" role="main" class="col-md-10 mobile-padding-horizontal-none">
+                        
+                        <div id="PageBar_pageTitle" class="page-title page-title-bar">
+    <h2><a href="/ICS/Registration/Course_Schedule.jnz" id="contextName">Course Schedule</a></h2>
+</div>
+<div id="PageBar_pageTitleButtons" class="page-title-btn">
+    
+    <button onclick="__doPostBack('PageBar$nonAdminPreferences','')" id="PageBar_nonAdminPreferences" class="btn btn-primary-no-bg glyphicons glyphicons-cogwheel" type="button">
+         <span class="sr-only">Preferences</span>
+    </button>
+    <button id="PageBar_btnPrintView" class="btn btn-primary-no-bg glyphicons glyphicons-print" type="button" onclick="window.print(); return false;">
+        <span class="sr-only">Send to Printer</span>
+    </button>
+    <a href="/ICS/Help/EX/Students/My_Course_Schedule_Overview.htm" id="PageBar_helpButton" tabindex="0" class="btn btn-primary-no-bg glyphicons glyphicons-question-sign" role="button" title="Help" target="blank">
+        <span class="sr-only">Help</span>
+    </a>
+</div>
+
+
+                        
+                        <span id="content"></span>
+                        <div id="portlet-grid" class="portlet-grid one_column"><div class="row"><div class="portlet-column col-md-12"><div id="pg0_StudentSchedule" class="portlet singlePortlet pt_StudentSchedule pi_My_Course_Schedule" style="z-index:1;"><div class="sr-only"><h3><a href="/ICS/Registration/Course_Schedule.jnz?portlet=My_Course_Schedule" title="Go to main My Course Schedule screen">My Course Schedule</a> - Schedule Details</h3><div class="portlet-help-wrapper"> <a class="btn btn-primary-no-bg help" target="blank" href="/ICS/Help/EX/Students/My_Course_Schedule_Overview.htm" title="Get help using 'My Course Schedule'"><span class="glyphicons glyphicons-question-sign"><span class="sr-only">Get help using 'My Course Schedule'</span></span></a></div></div><div class="portlet-padding"><div id="pg0_V_divBreadCrumb"><div class="Crumbs"></div></div>
+
+
+<div id="pg0_V_divHeader"><h4>Course Schedule for Heechan Park</h4></div>
+<div id="pg0_V_divTermWarning"><div class="hint">Term Data is only available for current or pre-registered courses.</div></div>
+<div id="pg0_V_divMain" class="pSection">
+	<table cellSpacing="2" cellPadding="2" width="75%" border="0">
+		<tr>
+			<td height="14">Term:&nbsp;
+				<select name="pg0$V$ddlTerm" id="pg0_V_ddlTerm">
+	<option value="2021;SU">2021 - Summer</option>
+	<option value="2021;SP">2021 - Spring</option>
+	<option value="2020;FA">2020 - Fall</option>
+	<option value="2020;SU">2020 - Summer</option>
+	<option selected="selected" value="2020;SP">2020 - Spring</option>
+	<option value="2019;FA">2019 - Fall</option>
+
+</select></td>
+			<td height="14">Division&nbsp;
+				<select name="pg0$V$ddlDivision" id="pg0_V_ddlDivision">
+	<option selected="selected" value="">All Divisions</option>
+	<option value="UG">Undergraduate</option>
+
+</select></td>
+		</tr>
+		<tr>
+			<td colSpan="2"><input type="submit" name="pg0$V$btnSearch" value="Search" id="pg0_V_btnSearch" style="width:80px;" /></td>
+		</tr>
+		<TR>
+			<TD colSpan="2"></TD>
+		</TR>
+		<tr>
+			<td colSpan="2">
+				<DIV id="pg0_V_divGroupedGrid">
+				<table role="grid" class="groupedGrid " id="pg0_V_ggCourses" cellspacing="0" cellpadding="-1" border="0">
+	<thead>
+		<tr>
+			<th colspan="10"><span class="left">
+                			2020 - Spring - All Divisions
+                		</span><span class="right"></span></th>
+		</tr><tr>
+			<th>Textbooks</th><th>Course</th><th>Title</th><th>Credits</th><th>Status</th><th>Grading Type</th><th>Faculty</th><th>Meets</th><th>Dates</th><th>Room</th>
+		</tr>
+	</thead><tbody class="gbody">
+		<tr>
+			<td align="center" valign="top" style="width:1%;"></td><td align="left" valign="top" style="white-space:nowrap;">
+									<a id="pg0_V_ggCourses_sec2_row2_lnkCourse" href="javascript:__doPostBack(&#39;pg0$V$ggCourses$sec2$row2$lnkCourse&#39;,&#39;&#39;)">BUSI 338 A</a>
+								</td><td align="left" valign="top">
+									International Marketing Management
+								</td><td align="left" valign="top">
+									3.00
+								</td><td align="left" valign="top">
+									Current
+								</td><td align="left" valign="top">
+									CR
+								</td><td align="left" valign="top">
+									<ul>
+										
+												<li>
+													Gao, Mr Ronnie
+													<br>
+													&nbsp
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													W
+													<br>
+													6:15 PM - 9:00
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													1/7/2020
+													-<br>
+													4/9/2020
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													MAIN
+													/
+													NWB
+													/
+													114
+													<br>
+													&nbsp
+												</li>
+											
+									</ul>
+								</td>
+		</tr><tr class=" subItem" style="display:none;">
+			<td colspan="10">
+			<table width="96%">
+				<tr><td >
+        	
+              </td></tr>
+                <tr>
+					<td>
+                    
+        </td></tr></table>
+	</td>
+		</tr><tr class="alt">
+			<td align="center" valign="top" style="width:1%;"></td><td align="left" valign="top" style="white-space:nowrap;">
+									<a id="pg0_V_ggCourses_sec2_row4_lnkCourse" href="javascript:__doPostBack(&#39;pg0$V$ggCourses$sec2$row4$lnkCourse&#39;,&#39;&#39;)">CMPT 334 A</a>
+								</td><td align="left" valign="top">
+									Principles of Operating Systems
+								</td><td align="left" valign="top">
+									3.00
+								</td><td align="left" valign="top">
+									Current
+								</td><td align="left" valign="top">
+									CR
+								</td><td align="left" valign="top">
+									<ul>
+										
+												<li>
+													Sutcliffe, Mr Richard Joseph
+													<br>
+													&nbsp
+												</li>
+											
+												<li>
+													Wong, Cheung Hei
+													<br>
+													&nbsp
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													T
+													<br>
+													6:15 PM - 9:00
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													1/7/2020
+													-<br>
+													4/9/2020
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													MAIN
+													/
+													NEU
+													/
+													13
+													<br>
+													&nbsp
+												</li>
+											
+									</ul>
+								</td>
+		</tr><tr class="alt subItem" style="display:none;">
+			<td colspan="10">
+			<table width="96%">
+				<tr><td >
+        	
+              </td></tr>
+                <tr>
+					<td>
+                    
+        </td></tr></table>
+	</td>
+		</tr><tr>
+			<td align="center" valign="top" style="width:1%;"></td><td align="left" valign="top" style="white-space:nowrap;">
+									<a id="pg0_V_ggCourses_sec2_row6_lnkCourse" href="javascript:__doPostBack(&#39;pg0$V$ggCourses$sec2$row6$lnkCourse&#39;,&#39;&#39;)">CMPT 340 A</a>
+								</td><td align="left" valign="top">
+									Discrete Structure and Computing
+								</td><td align="left" valign="top">
+									3.00
+								</td><td align="left" valign="top">
+									Current
+								</td><td align="left" valign="top">
+									CR
+								</td><td align="left" valign="top">
+									<ul>
+										
+												<li>
+													Sutcliffe, Mr Richard Joseph
+													<br>
+													&nbsp
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													MWF
+													<br>
+													8:00 - 8:50 AM
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													1/7/2020
+													-<br>
+													4/9/2020
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													MAIN
+													/
+													NEU
+													/
+													41
+													<br>
+													&nbsp
+												</li>
+											
+									</ul>
+								</td>
+		</tr><tr class=" subItem" style="display:none;">
+			<td colspan="10">
+			<table width="96%">
+				<tr><td >
+        	
+              </td></tr>
+                <tr>
+					<td>
+                    
+        </td></tr></table>
+	</td>
+		</tr><tr class="alt">
+			<td align="center" valign="top" style="width:1%;"></td><td align="left" valign="top" style="white-space:nowrap;">
+									<a id="pg0_V_ggCourses_sec2_row8_lnkCourse" href="javascript:__doPostBack(&#39;pg0$V$ggCourses$sec2$row8$lnkCourse&#39;,&#39;&#39;)">CMPT 382 A</a>
+								</td><td align="left" valign="top">
+									Machine Learning
+								</td><td align="left" valign="top">
+									3.00
+								</td><td align="left" valign="top">
+									Current
+								</td><td align="left" valign="top">
+									CR
+								</td><td align="left" valign="top">
+									<ul>
+										
+												<li>
+													Lo, Felix Tun-Han
+													<br>
+													&nbsp
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													MW
+													<br>
+													1:30 PM - 2:45
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													1/7/2020
+													-<br>
+													4/9/2020
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													MAIN
+													/
+													NEU
+													/
+													21
+													<br>
+													&nbsp
+												</li>
+											
+									</ul>
+								</td>
+		</tr><tr class="alt subItem" style="display:none;">
+			<td colspan="10">
+			<table width="96%">
+				<tr><td >
+        	
+              </td></tr>
+                <tr>
+					<td>
+                    
+        </td></tr></table>
+	</td>
+		</tr><tr>
+			<td align="center" valign="top" style="width:1%;"></td><td align="left" valign="top" style="white-space:nowrap;">
+									<a id="pg0_V_ggCourses_sec2_row10_lnkCourse" href="javascript:__doPostBack(&#39;pg0$V$ggCourses$sec2$row10$lnkCourse&#39;,&#39;&#39;)">RELS 160 B</a>
+								</td><td align="left" valign="top">
+									Intro to Theology
+								</td><td align="left" valign="top">
+									3.00
+								</td><td align="left" valign="top">
+									Current
+								</td><td align="left" valign="top">
+									CR
+								</td><td align="left" valign="top">
+									<ul>
+										
+												<li>
+													Laing, Mr Kenneth Richard
+													<br>
+													&nbsp
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													TR
+													<br>
+													1:30 PM - 2:45
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													1/7/2020
+													-<br>
+													4/9/2020
+												</li>
+											
+									</ul>
+								</td><td align="left" valign="top" style="white-space:nowrap;">
+									<ul>
+										
+												<li>
+													MAIN
+													/
+													NEU
+													/
+													41
+													<br>
+													&nbsp
+												</li>
+											
+									</ul>
+								</td>
+		</tr><tr class=" subItem" style="display:none;">
+			<td colspan="10">
+			<table width="96%">
+				<tr><td >
+        	
+              </td></tr>
+                <tr>
+					<td>
+                    
+        </td></tr></table>
+	</td>
+		</tr>
+	</tbody>
+</table></DIV>
+			</td>
+		</tr>
+	</table>
+	<div class="smalltext" id="divGroupedGrid">&nbsp;</div>
+	<table>
+		<tr>
+			<td>
+				<a id="pg0_V_lnkCustomReport" style="font-weight:bold;"><a href="Applications/CRM/Reports/b2mehaiyzqkzcvwkbbflhy2u7_54_53_PM_StudentSchedule.pdf" target="_report">Print Schedule</a>&nbsp;<img src="UI/Common/Images/PortletImages/Icons/pdf.gif"></a></td>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+	</table>
+</div>
+</div></div>
+</div></div></div>
+                        <div class="portletsFoot containerFoot"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="container-fluid footer-wrapper primary">
+                <div class="row no-margin-r no-margin-l">
+                    <div class="col-md-12"><footer role="contentinfo"><div id="foot" class="footer-links"><a  target="_blank" href="http://www.twu.ca/governance/policies/website-privacy.html" >Privacy policy</a><a  target="_blank" href="http://www.twu.ca/about/" >About us</a><a  target="_blank" href="http://www.twu.ca/help" >Contact us</a><span id="copyright">  Powered by Jenzabar. v9.2.1</span></div></footer></div>
+                </div>
+            </div>
+            
+        
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("_scriptManager_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();var gridToggleImagePath = '/ICS/ui/common/images/';//]]>
+</script>
+</form>
+    </div>
+</body>
+</html>
