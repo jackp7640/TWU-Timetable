@@ -20,13 +20,17 @@ courses_info = '{\
 list_of_colours = ['#FFE37D', '#C8F7C5', '#E08283', '#99CCCC', '#CC99CC', '#C4DA87', '#F7B891']
 num             = ['001', '002', '003', '004', '005', '006', '007']
 
-# repeat for every course
+
+#repeat for every course
 for x in range(0, num_courses):
 	co_code = schedule_info.iloc[x][1]
 	co_name = schedule_info.iloc[x][2]
 	co_time = schedule_info.iloc[x][7]
 	co_loc  = schedule_info.iloc[x][9]
 
+	# formatting location
+	formatted_co_loc = co_loc.split(" ")
+	formatted_co_loc = formatted_co_loc[4] + " " + formatted_co_loc[8]
 
 	# formatting time
 	formatted_co_time = co_time.split(" ")
@@ -106,7 +110,7 @@ for x in range(0, num_courses):
 							"uid":"1db48ca1-5dd8-4979-ab9f-d61e0884f' + num[x] + '",\
 							"courseType":"",\
 							"instructor":"",\
-							"location":"' + co_loc + '",\
+							"location":"' + formatted_co_loc + '",\
 							"startHour":' + co_time_start_hr + ',\
 							"endHour":' + co_time_end_hr + ',\
 							"startMinute":' + co_time_start_min + ',\
