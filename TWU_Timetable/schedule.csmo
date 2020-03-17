@@ -1,0 +1,86 @@
+{
+	"dataCheck":"69761aa6-de4c-4013-b455-eb2a91fb2b76",
+	"saveVersion":4,
+	"schedules":
+	[
+		{
+			"title":"",
+			"items":
+			[
+				{
+					"uid":"40975ca6-721f-401f-b4f6-9ca4dac7263c",
+					"type":"Course",
+					"title":"BUSI 338A",
+					"meetingTimes":
+					[
+						{
+							"uid":"1db48ca1-5dd8-4979-ab9f-d61e0884f913",
+							"courseType":"",
+							"instructor":"",
+							"location":"NWB 114",
+							"startHour":18,
+							"endHour":21,
+							"startMinute":15,
+							"endMinute":0,
+							"days":
+							{
+								"monday":false,
+								"tuesday":false,
+								"wednesday":true,
+								"thursday":false,
+								"friday":false,
+								"saturday":false,
+								"sunday":false
+							}
+						}
+					],
+					"backgroundColor":"#FFE37D"
+				},
+
+				{
+					"uid":"2d22bdd1-f3cb-4bc4-847b-6c3ca79ec600",
+					"type":"Course",
+					"title":"CMPT 334A",
+					"meetingTimes":
+					[
+						{
+							"uid":"1db48ca1-5dd8-4979-ab9f-d61e0884f913",
+							"courseType":"",
+							"instructor":"",
+							"location":"NEU 13",
+							"startHour":18,
+							"endHour":21,
+							"startMinute":15,
+							"endMinute":0,
+							"days":{"monday":false,"tuesday":true,"wednesday":false,"thursday":false,"friday":false,"saturday":false,"sunday":false}
+						}
+					],
+					"backgroundColor":"#C8F7C5"
+				},
+
+				{
+					"uid":"87cd1c8c-a94c-4ad3-bb87-16045ac7eb1e",
+					"type":"Course",
+					"title":"CMPT 340A",
+					"meetingTimes":
+					[
+						{
+							"uid":"1db48ca1-5dd8-4979-ab9f-d61e0884f913",
+							"courseType":"",
+							"instructor":"",
+							"location":"NEU 41",
+							"startHour":8,
+							"endHour":8,
+							"startMinute":0,
+							"endMinute":50,
+							"days":
+							{"monday":true,"tuesday":false,"wednesday":true,"thursday":false,"friday":true,"saturday":false,"sunday":false}
+						}
+					],
+					"backgroundColor":"#E08283"
+				}
+			]
+		}
+	]
+	,"currentSchedule":0
+}

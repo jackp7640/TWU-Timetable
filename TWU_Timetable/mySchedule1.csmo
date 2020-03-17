@@ -1,0 +1,35 @@
+{	
+	"dataCheck":"69761aa6-de4c-4013-b455-eb2a91fb2b76",	
+	"saveVersion":4,	
+	"schedules":	
+	[		
+		{			
+			"title":"",			
+			"items":			
+			[
+				{					
+					"uid":"40975ca6-721f-401f-b4f6-9ca4dac7001c",					
+					"type":"Course",					
+					"title":"BUSI 338 A",					
+					"meetingTimes":					
+					[						
+						{						
+							"uid":"1db48ca1-5dd8-4979-ab9f-d61e0884f001",							
+							"courseType":"",	
+							"instructor":"",									"location":"MAIN  /  NWB  /  114  &nbsp",							
+							"startHour":18,		
+							"endHour":21,										"startMinute":15,		
+							"endMinute":0,		
+							"days":							
+							{								
+	"monday":false,								"tuesday":false,								"wednesday":true,								"thursday":false,								"friday":false,								"saturday":false,								"sunday":false							
+							}						
+						}					
+					],					
+					"backgroundColor":"#FFE37D"				
+				}
+			]		
+		}	
+	],
+	"currentSchedule":0
+}
