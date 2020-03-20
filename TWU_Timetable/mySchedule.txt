@@ -1,0 +1,9 @@
+0/BUSI 338 A/International Marketing Management/3/18/15/21/00/165.0/NWB 114/PM/PM/
+1/CMPT 334 A/Principles of Operating Systems/2/18/15/21/00/165.0/NEU 13/PM/PM/
+2/CMPT 340 A/Discrete Structure and Computing/1/8/00/8/50/50.0/NEU 41/AM/AM/
+2/CMPT 340 A/Discrete Structure and Computing/3/8/00/8/50/50.0/NEU 41/AM/AM/
+2/CMPT 340 A/Discrete Structure and Computing/5/8/00/8/50/50.0/NEU 41/AM/AM/
+3/CMPT 382 A/Machine Learning/1/13/30/14/45/75.0/NEU 21/PM/PM/
+3/CMPT 382 A/Machine Learning/3/13/30/14/45/75.0/NEU 21/PM/PM/
+4/RELS 160 B/Intro to Theology/2/13/30/14/45/75.0/NEU 41/PM/PM/
+4/RELS 160 B/Intro to Theology/4/13/30/14/45/75.0/NEU 41/PM/PM/

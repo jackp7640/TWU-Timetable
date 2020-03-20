@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .forms import UserRegisterForm
+from .forms import TwuLoginForm
 from django.contrib.auth.decorators import login_required
+from . import request_twu
 
 def register(request):
 	if request.method == 'POST':
@@ -22,3 +24,21 @@ def register(request):
 @login_required
 def profile(request):
 	return render(request, 'users/profile.html')
+
+
+def TwuLogin(request):
+	if request.method == 'POST':
+		form = TwuLoginForm()
+		#content = request_twu.request(form.username, form.password)
+		return redirect('TwuInfo')
+		#return render(request, 'users/TwuInfo.html', {'form': form})
+	else:
+		form = TwuLoginForm()
+
+
+	return render(request, 'users/TwuLogin.html', {'form': form})
+
+
+def TwuInfo(request):
+	form = TwuLoginForm()
+	return render(request, 'users/TwuInfo.html', {'form': form})

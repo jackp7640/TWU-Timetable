@@ -1,25 +1,16 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+from datetime import datetime
 
 dfs = pd.read_html('sample_course_list.html')
 schedule_info = dfs[1]
 
 num_courses = len(schedule_info)
+earliest_start = "2399"
+latest_end     = "0"
 
-courses_info = '{\
-	"dataCheck":"69761aa6-de4c-4013-b455-eb2a91fb2b76",\
-	"saveVersion":4,\
-	"schedules":\
-	[\
-		{\
-			"title":"",\
-			"items":\
-			['
-
-list_of_colours = ['#FFE37D', '#C8F7C5', '#E08283', '#99CCCC', '#CC99CC', '#C4DA87', '#F7B891']
-num             = ['001', '002', '003', '004', '005', '006', '007']
-
+info = ""
 
 #repeat for every course
 for x in range(0, num_courses):
@@ -31,6 +22,7 @@ for x in range(0, num_courses):
 	# formatting location
 	formatted_co_loc = co_loc.split(" ")
 	formatted_co_loc = formatted_co_loc[4] + " " + formatted_co_loc[8]
+	co_loc = formatted_co_loc
 
 	# formatting time
 	formatted_co_time = co_time.split(" ")
@@ -60,82 +52,90 @@ for x in range(0, num_courses):
 	co_time_start_min = formatted_co_time_start[1]
 	co_time_end_hr    = formatted_co_time_end[0]
 	co_time_end_min   = formatted_co_time_end[1]
-	
-	if co_time_start_min == '00':
-		co_time_start_min = '0'
-	if co_time_end_min == '00':
-		co_time_end_min = '0'
+	co_time_start_AM_or_PM = ''
+	co_time_end_AM_or_PM   = ''
 
-	M_TF = "false"
-	T_TF = "false"
-	W_TF = "false"
-	R_TF = "false"
-	F_TF = "false"
-	S_TF = "false"
-	U_TF = "false"
+	if int(co_time_end_hr) > 12:
+		co_time_end_AM_or_PM = 'PM'
+	else:
+		co_time_end_AM_or_PM   = 'AM'
 
-	formatted_co_time_day = list(co_time_day)
-	for day in formatted_co_time_day:
+	if int(co_time_start_hr) > 12:
+		co_time_start_AM_or_PM = 'PM'
+	else:
+		co_time_start_AM_or_PM   = 'AM'
+
+	a = co_time_start_hr + co_time_start_min
+	b = co_time_end_hr + co_time_end_min
+	time1 = datetime.strptime(a,"%H%M") # convert string to time
+	time2 = datetime.strptime(b,"%H%M") 
+	diff = time2 - time1
+	duration = diff.total_seconds()/60    # seconds to mins 
+
+	print("duration of class: {}".format(duration))
+	print("this course # is: {}".format(x))
+
+
+	list_of_co_day = list(co_time_day)
+	for day in list_of_co_day:
 		if day == 'M':
-			M_TF = "true"
+			list_of_co_day[list_of_co_day.index(day)] = '1'
 
 		elif day == 'T':
-			T_TF = "true"
-
+			list_of_co_day[list_of_co_day.index(day)] = '2'
+	
 		elif day == 'W':
-			W_TF = "true"
-
+			list_of_co_day[list_of_co_day.index(day)] = '3'
+	
 		elif day == 'R':
-			R_TF = "true"
+			list_of_co_day[list_of_co_day.index(day)] = '4'
 
 		elif day == 'F':
-			F_TF = "true"
+			list_of_co_day[list_of_co_day.index(day)] = '5'
 
 		elif day == 'S':
-			S_TF = "true"
+			list_of_co_day[list_of_co_day.index(day)] = '6'
 
 		elif day == 'U':
-			U_TF = "true"
+			list_of_co_day[list_of_co_day.index(day)] = '7'
 
 
 
+	print(co_code)
+	print(co_name)
+	print(list_of_co_day)
+	print(co_time_start_24 + " - " + co_time_end_24)
+	print(co_loc)
 
-	courses_info += '{\
-					"uid":"40975ca6-721f-401f-b4f6-9ca4dac7'+ num[x] +'c",\
-					"type":"Course",\
-					"title":"' + co_code + '",\
-					"meetingTimes":\
-					[\
-						{\
-							"uid":"1db48ca1-5dd8-4979-ab9f-d61e0884f' + num[x] + '",\
-							"courseType":"",\
-							"instructor":"",\
-							"location":"' + formatted_co_loc + '",\
-							"startHour":' + co_time_start_hr + ',\
-							"endHour":' + co_time_end_hr + ',\
-							"startMinute":' + co_time_start_min + ',\
-							"endMinute":' + co_time_end_min + ',\
-							"days":\
-							{\
-								"monday":' + M_TF + ',\
-								"tuesday":' + T_TF + ',\
-								"wednesday":' + W_TF + ',\
-								"thursday":' + R_TF + ',\
-								"friday":' + F_TF + ',\
-								"saturday":' + S_TF + ',\
-								"sunday":' + U_TF + '\
-							}\
-						}\
-					],\
-					"backgroundColor":"' + list_of_colours[x] + '"\
-				},'
+	start = co_time_start_hr + co_time_start_min
+	end   = co_time_end_hr + co_time_end_min
 
-courses_info = courses_info[:-1]
-courses_info += ']\
-		}\
-	]\
-	,"currentSchedule":0\
-}'
+	if int(start) < int(earliest_start):
+		earliest_start = start
 
-f = open("mySchedule.csmo","w+")
-f.write(courses_info)
+	if int(end) > int(latest_end):
+		latest_end = end
+
+	for day in list_of_co_day:
+		info += str(x) + "/" + co_code + "/" + co_name + "/" + day + "/" \
+				+ co_time_start_hr + "/" + co_time_start_min + "/" + co_time_end_hr + "/" + co_time_end_min  \
+				+ "/" + str(duration) + "/" + co_loc + "/" + co_time_start_AM_or_PM + "/" + co_time_end_AM_or_PM +"/" +"\n" 
+ 
+
+
+f = open("mySchedule.txt","w+")
+f.write(info)
+ 
+f = open("startend.txt","w+")
+f.write(earliest_start + "/" + latest_end)
+	# WHAT NEEDS TO BE IN TXT FILE
+	# 1) FOR EVERY COURSE
+	# 	a) co_code
+	# 	b) co_name
+	# 	c) co_time_day
+	# 	d) co_time_start (12 hr)
+	# 	e) co_time_end (12 hr)
+	# 	f) co_loc
+	# 2) earliest_start
+	# 3) latest_end
+

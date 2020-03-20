@@ -1,0 +1,8 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<h1>TWU INFO PAGE</h1>
+	<h2>Your TWU Username: {{ form.username }}</h2>
+	<h2>Your TWU Password:{{ form.password }}</h2>
+{% endblock content %}
+</html>
