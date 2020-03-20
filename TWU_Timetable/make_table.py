@@ -58,6 +58,8 @@ ax.set_xlim(0.5,len(days)+0.5)
 ax.set_xticks(range(1,len(days)+1))
 ax.set_xticks(range(1,len(days)+1), minor=True)
 ax.set_xticklabels(days)
+for tic in ax.xaxis.get_major_ticks():
+    tic.tick1On = tic.tick2On = False
 
 ax.set_ylim(end_index, start_index)
 ax.set_yticks(range(start_index,end_index+1))
