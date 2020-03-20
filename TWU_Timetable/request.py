@@ -1,14 +1,15 @@
 from selenium import webdriver
-import sys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from scrape import scrape
+from make_table import make_table
 
-for i in f:
+
     		
 
-def request():
-	# username = 'heechan.park'
-	# password = '@Gmlcks813'
-	username = sys.argv[1]
-	password = sys.argv[2]
+def request(username, password):
+
 	url = "https://ics.twu.ca/ICS/"
 
 
@@ -16,6 +17,9 @@ def request():
 
 		driver = webdriver.Chrome('./chromedriver')
 		driver.get(url)
+
+		element = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.ID, "userName")))
 
 		if driver.find_element_by_id('userName').is_displayed():
 			driver.find_element_by_id('userName').send_keys(username)
@@ -37,6 +41,7 @@ def request():
 		print("ENTER YOUR USERNAME AND PASSWORD")
 
 
-request()
+
+
 
 
