@@ -1,15 +1,16 @@
 import sys
+from getpass import getpass
 from request import request
 from scrape import scrape
 from make_table import make_table
 
 def get_table():
-	username = sys.argv[1]
-	password = sys.argv[2]
+	username = input("Username: ")
+	password = getpass()
 
-	request(username, password)
+	selected_term = request(username, password)
 	scrape("twu_website.html")
-	make_table()
+	make_table(selected_term)
 
 
 get_table()

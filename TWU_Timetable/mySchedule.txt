@@ -1,9 +1,12 @@
-0/BUSI 338 A/International Marketing Management/3/18/15/21/00/165.0/NWB 114/PM/PM/
-1/CMPT 334 A/Principles of Operating Systems/2/18/15/21/00/165.0/NEU 13/PM/PM/
-2/CMPT 340 A/Discrete Structure and Computing/1/8/00/8/50/50.0/NEU 41/AM/AM/
-2/CMPT 340 A/Discrete Structure and Computing/3/8/00/8/50/50.0/NEU 41/AM/AM/
-2/CMPT 340 A/Discrete Structure and Computing/5/8/00/8/50/50.0/NEU 41/AM/AM/
-3/CMPT 382 A/Machine Learning/1/13/30/14/45/75.0/NEU 21/PM/PM/
-3/CMPT 382 A/Machine Learning/3/13/30/14/45/75.0/NEU 21/PM/PM/
-4/RELS 160 B/Intro to Theology/2/13/30/14/45/75.0/NEU 41/PM/PM/
-4/RELS 160 B/Intro to Theology/4/13/30/14/45/75.0/NEU 41/PM/PM/
+0/CMPT 339 A/Intr to Database Management Systems/2/13/30/14/45/75.0/TBD/PM/PM/
+0/CMPT 339 A/Intr to Database Management Systems/4/13/30/14/45/75.0/TBD/PM/PM/
+1/CMPT 385 A/Software Engineering/3/12/00/13/15/75.0/TBD/AM/PM/
+1/CMPT 385 A/Software Engineering/5/12/00/13/15/75.0/TBD/AM/PM/
+2/GAME 350 A/Video Game Programming/3/18/15/21/00/165.0/TBD/PM/PM/
+3/GREE 235 A/Elementary New Testament Greek/2/12/00/13/15/75.0/TBD/AM/PM/
+3/GREE 235 A/Elementary New Testament Greek/4/12/00/13/15/75.0/TBD/AM/PM/
+4/HKIN 144 B/Tennis/1/9/30/10/45/75.0/TBD/AM/AM/
+4/HKIN 144 B/Tennis/3/9/30/10/45/75.0/TBD/AM/AM/
+5/NATS 483 A/Xn Persp in Science: Computing Sci/2/18/15/21/00/165.0/TBD/PM/PM/
+6/SPAN 101 B/Introduction to Spanish/2/9/30/10/45/75.0/TBD/AM/AM/
+6/SPAN 101 B/Introduction to Spanish/4/9/30/10/45/75.0/TBD/AM/AM/

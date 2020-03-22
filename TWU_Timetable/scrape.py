@@ -7,7 +7,7 @@ def scrape(html_file):
 
 	dfs = pd.read_html(html_file)
 	schedule_info = dfs[1]
-
+	#schedule_info.to_csv('schedule_info.csv', sep='\t')
 	num_courses = len(schedule_info)
 	earliest_start = "2399"
 	latest_end     = "0"
@@ -22,9 +22,16 @@ def scrape(html_file):
 		co_loc  = schedule_info.iloc[x][9]
 
 		# formatting location
-		formatted_co_loc = co_loc.split(" ")
-		formatted_co_loc = formatted_co_loc[4] + " " + formatted_co_loc[8]
-		co_loc = formatted_co_loc
+		try:
+		    formatted_co_loc = co_loc.split(" ")
+		    formatted_co_loc = formatted_co_loc[4] + " " + formatted_co_loc[8]
+		    if any(char.isdigit() for char in formatted_co_loc):
+		    	co_loc = formatted_co_loc
+		    else:
+		    	co_loc = 'TBD'
+		except IndexError:
+		    co_loc = 'TBD'
+
 
 		# formatting time
 		formatted_co_time = co_time.split(" ")
@@ -40,7 +47,7 @@ def scrape(html_file):
 			co_time_AM_PM = formatted_co_time[5]
 
 		# convert 12 hr time to 24 hr time
-		if co_time_AM_PM == "PM" and co_time_start != '12:00':
+		if co_time_AM_PM == "PM":
 			co_time_start_24 = pd.to_datetime(co_time_start+"PM").strftime('%H:%M')
 			co_time_end_24   = pd.to_datetime(co_time_end+"PM").strftime('%H:%M')
 		else:
@@ -74,6 +81,8 @@ def scrape(html_file):
 		diff = time2 - time1
 		duration = diff.total_seconds()/60    # seconds to mins 
 
+		print("time1: {}".format(a))
+		print("time2: {}".format(b))
 		print("duration of class: {}".format(duration))
 		print("this course # is: {}".format(x))
 
@@ -140,4 +149,5 @@ def scrape(html_file):
 		# 	f) co_loc
 		# 2) earliest_start
 		# 3) latest_end
+
 

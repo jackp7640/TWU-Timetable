@@ -10,10 +10,10 @@ import matplotlib.pyplot as plt
 import math
 import os
 
-def make_table():
+def make_table(selected_term):
 
     days=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
-    colors=['pink', 'lightgreen', 'lightblue', 'wheat', 'salmon']
+    colors=['pink', 'lightgreen', 'lightblue', 'wheat', 'salmon', 'slateblue', 'slategrey']
     start_index = 0
     end_index   = 0
 
@@ -34,7 +34,7 @@ def make_table():
             ]
 
     input_files=['my_data.txt']
-    title='My Schedule'
+    title=selected_term
 
     ## USER DEPENDENT VARIABLES
     f = open("startend.txt", "r")
@@ -104,6 +104,8 @@ def make_table():
             co_time_end_index = co_time_start_index + ((co_time_end_hr - co_time_start_hr) * 4) + ((co_time_end_min - co_time_start_min) / 15)
 
 
+        print("items: {}".format(items))
+
         data     = list(map(float, items[3:-4]))
         co_day   = data[0]
         co_start = data[1] + data[2]/60
@@ -155,3 +157,5 @@ def make_table():
 
 
     os.startfile('{0}.png'.format(title))
+
+

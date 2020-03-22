@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import Select
 from scrape import scrape
 from make_table import make_table
 
@@ -33,9 +34,21 @@ def request(username, password):
 
 		url = "https://ics.twu.ca/ICS/Registration/Course_Schedule.jnz"
 		driver.get(url)
+		term = driver.find_element_by_id('pg0_V_ddlTerm')
+		select = Select(term)
+		print('Available Semesters: ')
+		print(term.text)
+
+		selected_term = input("Choose a semester: ")
+		select.select_by_visible_text(selected_term)
+		click_button = driver.find_element_by_id('pg0_V_btnSearch')
+		click_button.click()
 		content = driver.page_source
 		f = open("twu_website.html","w+")
 		f.write(content)
+
+
+		return selected_term
 
 	else:
 		print("ENTER YOUR USERNAME AND PASSWORD")
