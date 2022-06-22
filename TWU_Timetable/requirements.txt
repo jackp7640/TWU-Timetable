@@ -11,7 +11,7 @@ kiwisolver==1.1.0
 lxml==4.5.0
 matplotlib==3.2.1
 numexpr==2.7.1
-numpy==1.18.1
+numpy==1.22.0
 orca==1.5.3
 pandas==1.0.2
 plotly==4.5.4
